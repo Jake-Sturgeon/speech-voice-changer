@@ -1,0 +1,15 @@
+#N canvas 3 5 945 818 10;
+#X obj 92 52 inlet~;
+#X obj 124 502 outlet~;
+#X obj 304 110 bng 15 250 50 0 empty empty RESET_ALL_LFO_MODULATORS
+17 7 0 10 -262144 -1 -1;
+#X obj 109 136 Tremolo~ 0 1;
+#X obj 109 293 RingModulation~ 0 1;
+#X obj 437 59 inlet;
+#X connect 0 0 3 0;
+#X connect 2 0 4 1;
+#X connect 2 0 3 1;
+#X connect 3 0 4 0;
+#X connect 4 0 1 0;
+#X connect 5 0 2 0;
+#X coords 0 -1 1 1 370 350 1 100 100;

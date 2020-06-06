@@ -1,0 +1,26 @@
+#N canvas 89 65 1017 794 10;
+#X obj 124 152 hsl 128 15 1 1000 1 0 empty empty Delay -2 -8 0 10 -260097
+-1 -1 9000 1;
+#X obj 561 121 sig~;
+#X floatatom 262 150 5 0 0 1 ms - -;
+#X obj 559 29 inlet~;
+#X obj 363 151 bng 15 250 50 0 empty empty RESET 17 7 0 10 -262144
+-1 -1;
+#X floatatom 57 49 5 0 0 0 - - -;
+#X obj 120 300 outlet~;
+#X obj 673 26 inlet;
+#X obj 120 179 MyMixer~;
+#X obj 561 173 vd~ \$0-delayline;
+#X obj 559 66 delwrite~ \$0-delayline 1000;
+#X connect 0 0 2 0;
+#X connect 1 0 9 0;
+#X connect 2 0 1 0;
+#X connect 3 0 8 0;
+#X connect 3 0 10 0;
+#X connect 4 0 5 0;
+#X connect 5 0 0 0;
+#X connect 5 0 8 1;
+#X connect 7 0 4 0;
+#X connect 8 0 6 0;
+#X connect 9 0 8 2;
+#X coords 0 -1 1 1 400 180 1 100 100;

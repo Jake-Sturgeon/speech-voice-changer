@@ -1,0 +1,76 @@
+#N canvas -13 -13 3200 1636 10;
+#X obj 277 82 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X floatatom 148 82 5 0 0 0 - - -;
+#X floatatom 84 82 5 0 0 0 - - -;
+#X obj 30 283 output~;
+#X floatatom 180 281 5 0 0 0 - - -;
+#X floatatom 277 280 5 0 0 0 - - -;
+#X obj 110 282 wsprobe~;
+#X obj 84 119 LFO~;
+#X floatatom 212 82 5 0 0 0 - - -;
+#X obj 1 695 cnv 15 552 21 empty \$0-pddp.cnv.footer empty 20 12 0
+14 -228856 -66577 0;
+#X obj 1 -12 cnv 15 552 40 empty \$0-pddp.cnv.header (LFO~) 3 12 0
+18 -204280 -1 0;
+#X obj 0 373 cnv 3 550 3 empty \$0-pddp.cnv.inlets inlets 8 12 0 13
+-228856 -1 0;
+#X obj 0 541 cnv 3 550 3 empty \$0-pddp.cnv.outlets outlets 8 12 0
+13 -228856 -1 0;
+#X obj 0 620 cnv 3 550 3 empty \$0-pddp.cnv.argument arguments 8 12
+0 13 -228856 -1 0;
+#X obj 79 382 cnv 17 3 17 empty \$0-pddp.cnv.let.0 0 5 9 0 16 -228856
+-162280 0;
+#X obj 79 550 cnv 17 3 17 empty \$0-pddp.cnv.let.0 0 5 9 0 16 -228856
+-162280 0;
+#X obj 79 411 cnv 17 3 17 empty \$0-pddp.cnv.let.1 1 5 9 0 16 -228856
+-162280 0;
+#X text 12 11 binary operators for signals;
+#X text 99 549 signal;
+#X text 169 549 - the outgoing signal;
+#X text 81 639 1) float;
+#X obj 456 39 pddp/dsp;
+#X text 99 381 float;
+#X obj 79 443 cnv 17 3 17 empty \$0-pddp.cnv.let.1 2 5 9 0 16 -228856
+-162280 0;
+#X text 99 410 float;
+#X text 99 442 float;
+#X obj 79 488 cnv 17 3 17 empty \$0-pddp.cnv.let.1 3 5 9 0 16 -228856
+-162280 0;
+#X text 99 487 float;
+#X text 169 485 - If an argument is provided \, resets LFO to initialised
+values.;
+#X obj 79 573 cnv 17 3 17 empty \$0-pddp.cnv.let.0 1 5 9 0 16 -228856
+-162280 0;
+#X obj 79 596 cnv 17 3 17 empty \$0-pddp.cnv.let.0 2 5 9 0 16 -228856
+-162280 0;
+#X text 169 381 - If an argument is provided \, sets the signal's Speed
+to that value.;
+#X text 169 411 - If an argument is provided \, sets the signal's Depth
+to that value.;
+#X text 169 443 - If an argument is provided \, sets the signal's type.
+0 => SQUARE 1 => SINE;
+#X text 99 572 float;
+#X text 169 572 - the outgoing signal's frequency;
+#X text 99 595 float;
+#X text 169 595 - the outgoing signal's depth;
+#X text 169 639 - (optional) a float argument initializes the LFO's
+Speed.;
+#X text 81 653 2) float;
+#X text 169 653 - (optional) a float argument initializes the LFO's
+Depth.;
+#X text 129 325 The LFO patch outputs an audio signal. Speed changes
+the signal's frequency \, and the Depth changes the signal's amplitude.
+;
+#X text 81 667 3) float;
+#X text 169 667 - (optional) a float argument initializes the LFO's
+signal type.;
+#X connect 0 0 7 3;
+#X connect 1 0 7 1;
+#X connect 2 0 7 0;
+#X connect 7 0 6 0;
+#X connect 7 0 3 0;
+#X connect 7 0 3 1;
+#X connect 7 1 4 0;
+#X connect 7 2 5 0;
+#X connect 8 0 7 2;

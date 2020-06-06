@@ -1,0 +1,57 @@
+#N canvas 953 0 958 988 10;
+#X floatatom 262 323 5 0 0 1 ms - -;
+#X obj 593 496 sig~;
+#X obj 127 323 hsl 128 15 1 1000 1 0 empty empty Delay -2 -8 0 10 -260097
+-1 -1 0 1;
+#X obj 640 463 *~;
+#X floatatom 454 324 5 0 0 0 - - -;
+#X obj 317 324 hsl 128 15 0 10 0 1 empty empty Amplitude__Multiplier
+-2 -8 0 10 -158976 -1 -1 0 1;
+#X obj 593 520 +~;
+#X obj 124 -6 inlet~;
+#X obj 135 523 outlet~;
+#X obj 407 152 bng 15 250 50 0 empty empty RESET 17 7 0 10 -262144
+-1 -1;
+#X floatatom 438 67 5 0 0 0 - - -;
+#X obj 184 152 LFO~ 0 1;
+#X obj 564 43 inlet;
+#X obj 125 351 MyMixer~;
+#X obj 185 117 bng 15 250 50 0 empty empty Underwater 17 7 0 10 -262144
+-1 -1;
+#X obj 145 45 r Underwater;
+#X msg 310 76 1;
+#X msg 214 79 10;
+#X msg 259 76 0.4;
+#X msg 165 79 5;
+#X obj 593 568 vd~ \$0-delayline;
+#X obj 144 22 delwrite~ \$0-delayline 1000;
+#X connect 0 0 1 0;
+#X connect 1 0 6 0;
+#X connect 2 0 0 0;
+#X connect 3 0 6 1;
+#X connect 4 0 3 1;
+#X connect 5 0 4 0;
+#X connect 6 0 20 0;
+#X connect 7 0 13 0;
+#X connect 7 0 21 0;
+#X connect 9 0 10 0;
+#X connect 9 0 11 3;
+#X connect 10 0 5 0;
+#X connect 10 0 2 0;
+#X connect 10 0 13 1;
+#X connect 11 0 3 0;
+#X connect 12 0 9 0;
+#X connect 13 0 8 0;
+#X connect 14 0 17 0;
+#X connect 14 0 18 0;
+#X connect 14 0 19 0;
+#X connect 14 0 16 0;
+#X connect 15 0 14 0;
+#X connect 16 0 11 2;
+#X connect 16 0 13 1;
+#X connect 16 0 5 0;
+#X connect 17 0 11 0;
+#X connect 18 0 11 1;
+#X connect 19 0 2 0;
+#X connect 20 0 13 2;
+#X coords 0 -1 1 1 400 350 1 100 100;

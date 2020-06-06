@@ -1,0 +1,7 @@
+#N canvas 0 0 3200 1636 10;
+#X obj 32 954 output~;
+#X obj 124 958 wsprobe~;
+#X obj 33 63 EffectsDashboard~;
+#X connect 2 0 0 0;
+#X connect 2 0 0 1;
+#X connect 2 0 1 0;

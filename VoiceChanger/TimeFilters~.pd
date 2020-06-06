@@ -1,0 +1,23 @@
+#N canvas 408 139 945 818 10;
+#X obj 125 141 LowPass~;
+#X obj 125 230 HighPass~;
+#X obj 415 140 BandPass~;
+#X obj 123 35 inlet~;
+#X obj 123 485 outlet~;
+#X obj 535 113 bng 15 250 50 0 empty empty RESET_ALL_TIME_FILTERS 17
+7 0 10 -262144 -262144 -1;
+#X obj 601 43 inlet;
+#X obj 123 308 GraphicEqualiser~ 1;
+#X obj 491 48 r Dalek;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 2 0 7 0;
+#X connect 3 0 0 0;
+#X connect 5 0 2 1;
+#X connect 5 0 0 1;
+#X connect 5 0 1 1;
+#X connect 5 0 7 1;
+#X connect 6 0 5 0;
+#X connect 7 0 4 0;
+#X connect 8 0 5 0;
+#X coords 0 -1 1 1 600 340 1 100 100;

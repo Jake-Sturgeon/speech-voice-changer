@@ -1,0 +1,64 @@
+#N canvas 953 0 958 988 10;
+#X obj 128 155 hsl 128 15 1 1000 1 0 empty empty Delay -2 -8 0 10 -260097
+-1 -1 8400 1;
+#X floatatom 262 154 5 0 0 1 ms - -;
+#X obj 633 221 sig~;
+#X obj 327 407 *~;
+#X obj 318 156 hsl 128 15 0 0.999 0 0 empty empty Feedback -2 -8 0
+10 -260160 -1 -1 12700 1;
+#X floatatom 451 155 5 0 0 1 - - -;
+#X obj 342 365 sig~;
+#X obj 528 85 inlet~;
+#X obj 429 122 bng 15 250 50 0 empty empty RESET 17 7 0 10 -262144
+-1 -1;
+#X obj 125 325 outlet~;
+#X floatatom 393 78 5 0 0 0 - - -;
+#X obj 765 100 inlet;
+#X obj 124 181 MyMixer~;
+#X obj 127 121 bng 15 250 50 0 empty empty C-3PO 17 7 0 10 -262144
+-1 -1;
+#X obj 130 32 r C-3PO;
+#X msg 161 73 10;
+#X msg 200 77 0.9;
+#X obj 624 97 r~ \$0-feedback;
+#X obj 327 445 s~ \$0-feedback;
+#X obj 633 256 vd~ \$0-delayline;
+#X obj 547 128 delwrite~ \$0-delayline 1000;
+#X obj 185 121 bng 15 250 50 0 empty empty Foreboding_Voice 17 7 0
+10 -262144 -1 -1;
+#X obj 216 31 r ForebodingVoice;
+#X msg 246 61 90;
+#X msg 319 61 0.999;
+#X msg 279 62 0.5;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 2 0 19 0;
+#X connect 3 0 18 0;
+#X connect 4 0 5 0;
+#X connect 5 0 6 0;
+#X connect 6 0 3 1;
+#X connect 7 0 12 0;
+#X connect 7 0 20 0;
+#X connect 8 0 10 0;
+#X connect 10 0 4 0;
+#X connect 10 0 0 0;
+#X connect 10 0 12 1;
+#X connect 11 0 8 0;
+#X connect 12 0 3 0;
+#X connect 12 0 9 0;
+#X connect 13 0 15 0;
+#X connect 13 0 16 0;
+#X connect 14 0 13 0;
+#X connect 15 0 0 0;
+#X connect 16 0 4 0;
+#X connect 16 0 12 1;
+#X connect 17 0 20 0;
+#X connect 19 0 12 2;
+#X connect 21 0 23 0;
+#X connect 21 0 25 0;
+#X connect 21 0 24 0;
+#X connect 22 0 21 0;
+#X connect 23 0 0 0;
+#X connect 24 0 4 0;
+#X connect 25 0 12 1;
+#X coords 0 -1 1 1 400 180 1 100 100;

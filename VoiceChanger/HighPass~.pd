@@ -1,0 +1,21 @@
+#N canvas 507 599 450 300 10;
+#X obj 32 50 inlet~;
+#X obj 32 191 outlet~;
+#X obj 126 147 hsl 150 15 0 10000 0 0 empty empty High-Pass_Cut-Off_Frequency
+-2 -8 0 10 -249719 -1 -1 0 1;
+#X obj 33 123 hip~;
+#X obj 290 111 bng 15 250 50 0 empty empty RESET 17 7 0 10 -262144
+-1 -1;
+#X obj 266 73 inlet;
+#X obj 120 50 loadbang;
+#X floatatom 119 81 5 0 0 0 - - -;
+#X floatatom 287 147 5 0 0 1 Hz - -;
+#X connect 0 0 3 0;
+#X connect 2 0 3 1;
+#X connect 2 0 8 0;
+#X connect 3 0 1 0;
+#X connect 4 0 6 0;
+#X connect 5 0 4 0;
+#X connect 6 0 7 0;
+#X connect 7 0 2 0;
+#X coords 0 -1 1 1 250 70 1 100 100;

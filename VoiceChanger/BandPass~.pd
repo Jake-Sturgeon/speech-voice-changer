@@ -1,0 +1,29 @@
+#N canvas 326 436 450 292 10;
+#X obj 47 151 inlet~;
+#X obj 47 234 outlet~;
+#X obj 125 161 hsl 150 15 0 10000 0 0 empty empty Centre_Frequency
+-2 -8 0 10 -208355 -1 -1 7450 1;
+#X obj 119 46 loadbang;
+#X obj 126 223 hsl 150 15 0 100 0 0 empty empty Q -2 -8 0 10 -208355
+-1 -1 0 1;
+#X msg 119 69 5000;
+#X obj 48 191 bp~;
+#X obj 280 124 bng 15 250 50 0 empty empty RESET 17 7 0 10 -262144
+-1 -1;
+#X obj 259 74 inlet;
+#X msg 165 70 0;
+#X floatatom 289 161 5 0 0 1 Hz - -;
+#X floatatom 287 222 5 0 0 1 - - -;
+#X connect 0 0 6 0;
+#X connect 2 0 6 1;
+#X connect 2 0 10 0;
+#X connect 3 0 5 0;
+#X connect 3 0 9 0;
+#X connect 4 0 6 2;
+#X connect 4 0 11 0;
+#X connect 5 0 2 0;
+#X connect 6 0 1 0;
+#X connect 7 0 3 0;
+#X connect 8 0 7 0;
+#X connect 9 0 4 0;
+#X coords 0 -1 1 1 250 160 1 100 100;

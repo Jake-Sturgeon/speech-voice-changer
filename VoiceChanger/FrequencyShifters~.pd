@@ -1,0 +1,15 @@
+#N canvas 603 270 945 818 10;
+#X obj 124 69 inlet~;
+#X obj 125 622 outlet~;
+#X obj 353 112 bng 15 250 50 0 empty empty RESET_ALL_FREQUENCY_SHIFTERS
+17 7 0 10 -262144 -1 -1;
+#X obj 457 70 inlet;
+#X obj 125 142 FrequencyShift~;
+#X obj 126 308 Vibrato~ 0 1;
+#X connect 0 0 4 0;
+#X connect 2 0 4 1;
+#X connect 2 0 5 1;
+#X connect 3 0 2 0;
+#X connect 4 0 5 0;
+#X connect 5 0 1 0;
+#X coords 0 -1 1 1 450 500 1 100 100;
